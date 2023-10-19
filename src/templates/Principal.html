@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INVENTARIO</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='losginstyle.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='principal.css') }}">
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<body>
+    <!--BARRA DE NAVEGACION-->
+    <nav>
+        <input type="checkbox" name="" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a href="{{ url_for('login') }}" class="enlace">
+            <img src="{{ url_for('static', filename='Img/inv.png') }}" alt="" class="logo">
+        </a>
+        <ul>
+            <li><a class="active" href="#">Principal</a></li>
+            <li><a href="{{ url_for('registrar') }}">Registrar</a></li>
+            <li><a href="https://www.google.com/intl/es-419/gmail/about/" target="_blank">Servicio al cliente</a></li>
+        </ul>
+    </nav>
+    <section></section>
+    <!--CONTENEDOR DE LOGIN-->
+    <section class="container">
+        <div class="video">
+            <video  width="400" height="400" controls>
+                <!--Tiene que aver un video descargado-->
+                <!-- en type es videos y que tipo de video es mp4 etc hay varios tipos-->
+                <source src="{{ url_for('static', filename='Img/VIDEO.mp4') }}" type="video/mp4">
+            </video>
+        </div>
+        <div class="informacion">
+            <h2 class="titulo-info">Información de interes</h2>
+            <p class="texto-info">¡Bienvenido Instituto Universitario Marco Fidel Suarez al manual definitivo de nuestro software de inventario! Prepárate para adentrarte en el mundo de la gestión de existencias de forma eficiente y sin complicaciones. En el video que siguen, te guiaremos paso a paso a través de las potentes herramientas y características que hacen que nuestro software sea la elección perfecta para tu negocio. Desde el control de inventario hasta la optimización de procesos, descubrirás todo lo que necesitas para impulsar tu eficiencia y éxito. ¡Comencemos tu viaje hacia una gestión de inventario más inteligente y efectiva!</p>
+            <a class="btn-manual" href="{{ url_for('static', filename='Img/MU.pdf') }}" download="Manual Usuario">Manual Usuario</a>
+        </div>
+    </section>
+    <!--PIE DE PAGINA-->
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="boxing">
+                <figure>
+                    <a href="#">
+                        <img src="{{ url_for('static', filename='Img/logouniversidad.png') }}" alt="Logo de SLee Dw">
+                    </a>
+                </figure>
+            </div>
+            <div class="boxing">
+                <h2>SOBRE NOSOTROS</h2>
+                <p>Somos la univerdiad del Norte</p>
+                <p>Estamos ubicados en CALLE 45#50-30, Barrio Manchester (Bello-Antioquia)</p>
+            </div>
+            <div class="boxing">
+                <h2>SIGUENOS</h2>
+                <div class="red-social">
+                    <a href="https://www.facebook.com/I.U.MarcoFidelSuarez/" class="fa fa-facebook" target="_blank"></a>
+                    <a href="https://www.instagram.com/iumafis_oficial/" class="fa fa-instagram" target="_blank"></a>
+                    <a href="https://api.whatsapp.com/send?phone=573245536721" class="fa fa-whatsapp" target="_blank"></a>
+                    <a href="https://www.youtube.com/@iumafisoficial1727/featured" class="fa fa-youtube" target="_blank"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2023 <b>INVENTORY</b> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer>
+</body>
+</html>

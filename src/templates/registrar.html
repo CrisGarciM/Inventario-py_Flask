@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INVENTARIO</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='principal.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='registrar.css') }}">
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<body>
+    <!--BARRA DE NAVEGACION-->
+    <nav>
+        <input type="checkbox" name="" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a href="{{ url_for('login') }}" class="enlace">
+            <img src="{{ url_for('static', filename='Img/inv.png') }}" alt="" class="logo">
+        </a>
+        <ul>
+            <li><a class="active" href="#">Registrar</a></li>
+            <li><a href="{{ url_for('principal') }}">Principal</a></li>
+            <li><a href="https://www.google.com/intl/es-419/gmail/about/" target="_blank">Servicio al cliente</a></li>
+        </ul>
+    </nav>
+    <section></section>
+    <!--CONTENEDOR DE LOGIN-->
+    <h3 class="titulo-info">Selecciona la opcion que deseas ingresar</h3>
+    <div class="container">
+        <section class="card">
+            <a href="{{ url_for('Equipo') }}" class="cards">
+                <h2 class="titulo">Equipo</h2>
+                <img src="{{ url_for('static', filename='Img/equipo.jpeg') }}" alt="equipo">
+            </a>
+            <a href="{{ url_for('Perifericos') }}" class="cards">
+                <h2 class="titulo">Periféricos</h2>
+                <img src="{{ url_for('static', filename='Img/perifericos.jpeg') }}" alt="Perifericos">
+            </a>
+            <a href="{{ url_for('Pantalla') }}" class="cards">
+                <h2 class="titulo">Pantallas</h2>
+                <img src="{{ url_for('static', filename='Img/pantalla.jpeg') }}" alt="pantalla">
+            </a>
+            <a href="{{ url_for('Otros') }}" class="cards">
+                <h2 class="titulo">Otros</h2>
+                <img src="{{ url_for('static', filename='Img/otros.jpeg') }}" alt="otros">
+            </a>
+        </section>
+    </div>
+</body>
+</html>

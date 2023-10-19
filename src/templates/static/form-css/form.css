@@ -1,0 +1,221 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.5s;
+}
+/*BARRA DE NAVEGACION*/
+nav{
+    background-color: #fff212;
+    height: 80px;
+    width: 100%;
+}
+.enlace{
+    position: absolute;
+    padding: 20px 50px;
+}
+.logo{
+    height: 40px;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    font-weight: bold;
+    color: #000000;
+    font-size: 22px bold;
+    margin-bottom: 25px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+li a.active, li a:hover{
+    background: #fac001;
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+section{
+    background-size: cover;
+    background-position: center center;
+}
+
+/* LINKS BTN */
+
+.links-btn{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-left: 8rem;
+}
+
+.link-btn{
+    background-color: #10bd01;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    padding: .5rem;
+    color: #000000;
+}
+
+.link-btn:hover{
+    background-color: #e9be01;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/*TITULO */
+
+.titulo-form{
+    text-align: center;
+    padding-top: 1rem;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+
+/* FORM */
+
+.form-section{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+}
+
+label{
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 5px;
+}
+
+input{
+    height: 2rem;
+    width: 450px;
+    padding: 5px;
+}
+
+textarea{
+    padding: 5px;
+}
+
+hr{
+    margin: 1rem;
+    border: 1px solid;
+}
+
+button{
+    margin-top: 1rem;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    color: #000000;
+    background-color: #9c9c9c;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+button:hover{
+    color: #fa0909;
+    background-color: #ffee00;
+    border: none;
+    border-radius: 5px;
+}
+
+.tabla{
+    padding-top: 1.5rem;
+    padding-left: 5rem;
+    overflow-y: scroll;
+}
+
+.tabla table{
+    width: 500px;
+}
+
+table, th, td {
+    height: 30px;
+    width: 20px;
+    text-align: center;
+}
+
+.tabla-equipo{
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    overflow-y: scroll;
+    padding-bottom: 3rem;
+}
+
+.table-eq{
+    width: 500px;
+    background-color: #0a141d;
+    color: #fac001;
+}
+
+.table-eq, th,td{
+    border: 1px solid #ffffff;
+    padding: .5rem;
+}
+
+.link-edit{
+    color: #10bd01;
+    text-decoration: none;
+}
+
+.link-delete{
+    text-decoration: none;
+    color: #fa0909;
+}
+
+/* PIE DE PAGINA*/
+.pie-pagina{
+    padding: 10px;
+    width: 100%;
+    background-color: #0a141d;
+}
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:50px;
+    padding: 45px 0px;
+}
+.pie-pagina .boxing figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .boxing figure img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+}

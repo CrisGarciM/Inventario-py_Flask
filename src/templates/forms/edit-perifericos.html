@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='form-css/form.css') }}">
+    <title>INVENTARIO</title>
+</head>
+<body>
+    <!--NAV-->
+    <nav>
+        <input type="checkbox" name="" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a href="#" class="enlace">
+            <img src="{{ url_for('static', filename='Img/inv.png') }}" alt="logo" class="logo">
+        </a>
+        <ul>
+            <li><a href="{{ url_for('registrar') }}" >Registrar</a></li>
+        </ul>
+    </nav>
+    <!--TITULO-->
+    <h2 class="titulo-form">Periféricos</h2>
+    <!--FORM-->
+    <section class="form-section">
+        <div class="form-formu">
+            <form action="/update-perife/{{perife.0}}" class="form" method="POST">
+                <label for="n_equi">Numero Equipo</label>
+                <input type="text" id="id" name="n_equi" placeholder="Ejm: Equipo 1" required value="{{perife.1}}">
+        
+                <label for="serial-mouse">Serial Mouse</label>
+                <input type="text" id="serial-mouse" name="serial-mouse" placeholder="Ejm: 4BC35TM9" required value="{{perife.2}}">
+        
+                <label for="marca-mouse">Marca Mouse</label>
+                <input type="text" id="marca-mouse" name="marca-mouse" placeholder="Ejm: HP" required value="{{perife.3}}">
+    
+                <label for="estado-mouse">Estado Mouse</label>
+                <input type="text" id="estado-mouse" name="estado-mouse" placeholder="Ejm: Bueno o Malo" required value="{{perife.4}}">
+    
+                <label for="descripcion-mouse">Descripción Mouse</label>
+                <textarea name="descripcion-mouse" id="descripcion-mouse" cols="30" rows="5" placeholder="Otras Características o Detalles" value="{{perife.5}}"></textarea>
+    
+                <hr>
+    
+                <label for="serial-teclado">Serial Teclado</label>
+                <input type="text" id="serial-teclado" name="serial-teclado" placeholder="Ejm: 4BC35TM9" required value="{{perife.6}}">
+    
+                <label for="marca-teclado">Marca Teclado</label>
+                <input type="text" id="marca-teclado" name="marca-teclado" placeholder="Ejm: HP" required value="{{perife.7}}">
+    
+                <label for="estado_teclado">Estado Teclado</label>
+                <input type="text" id="estado_teclado" name="estado_teclado" placeholder="Ejm: Bueno o Malo" required value="{{perife.8}}">
+        
+                <label for="descripcion-teclado">Descripción Teclado</label>
+                <textarea name="descripcion-teclado" id="descripcion-teclado" cols="30" rows="5" placeholder="Otras Características o Detalles" value="{{perife.9}}"></textarea>
+        
+                <label for="ubicacion">Ubicacion</label>
+                <input type="text" id="ubicacion" name="ubicacion" placeholder="Ejm: Sala 1" required value="{{perife.10}}">
+    
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+    <!--FOOTER-->
+    <footer class="pie-pagina">
+        <div class="boxing">
+            <figure>
+                <a href="#">
+                    <img src="{{ url_for('static', filename='Img/logouniversidad.png') }}" alt="Logo uni">
+                </a>
+            </figure>
+        </div>
+</body>
+</html>

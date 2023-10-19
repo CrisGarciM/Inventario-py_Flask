@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.5s;
+}
+/*BARRA DE NAVEGACION*/
+nav{
+    background-color: #fff212;
+    height: 80px;
+    width: 100%;
+}
+.enlace{
+    position: absolute;
+    padding: 20px 50px;
+}
+.logo{
+    height: 40px;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    font-weight: bold;
+    color: #000000;
+    font-size: 22px bold;
+    margin-bottom: 25px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+li a.active, li a:hover{
+    background: #ffc401;
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+section{
+    background-size: cover;
+    background-position: center center;
+}
+
+/* CONTAINER - SECTION INFO*/
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+.informacion{
+    margin-bottom: 20px;
+}
+
+.titulo-info{
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.texto-info{
+    padding-top: .5rem;
+    font-size: 15px;
+    padding-bottom: 1rem;
+}
+
+.btn-manual{
+    text-decoration: none;
+    background-color: #07ffac;
+    color: #000000;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-manual:hover{
+    background-color: #1ce21c;
+}
+/* PIE DE PAGINA*/
+.pie-pagina{
+    padding: 10px;
+    width: 100%;
+    background-color: #0a141d;
+}
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:50px;
+    padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .boxing figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .grupo-1 .boxing figure img{
+    width: 250px;
+}
+.pie-pagina .grupo-1 .boxing h2{
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.pie-pagina .grupo-1 .boxing p{
+    color: #efefef;
+    margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: rgb(230, 255, 1);
+}
+.pie-pagina .grupo-2{
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
+/* CONTAINER - SECTION INFO*/
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+.informacion{
+    padding-left: 2rem;
+}
+
+.titulo-info{
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.texto-info{
+    padding-top: .5rem;
+    font-size: 15px;
+    padding-bottom: 1rem;
+}
+
+.btn-manual{
+    text-decoration: none;
+    background-color: #ffee07;
+    color: #000000;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-manual:hover{
+    background-color: #ff9100;
+}
+
+@media screen and (max-width:1000px){
+    .logo{
+        height: 30px;
+    }
+}
+@media screen and (max-width:930px){
+    .container{
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .container .video{
+        flex-direction: column;
+        text-align: center;
+        z-index: -1;
+    }
+    .informacion {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 100%;
+        font-size: 15px;
+    }
+    .titulo-info{
+        height: 20%;
+        font-size: 30px;
+    }
+    
+    .texto-info{
+        top: auto;
+        font-size: 15px;
+    }
+
+
+    .pie-pagina{
+        margin-top: 20%;
+        height: auto;
+        width: auto;
+        bottom: 0;
+    }
+    
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        background: none;
+        color: rgb(253, 165, 2);
+        z-index: 10;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+    }
+    .info{
+        display: none;
+    }
+}

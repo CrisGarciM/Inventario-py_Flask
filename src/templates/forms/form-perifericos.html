@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='form-css/form.css') }}">
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>INVENTARIO</title>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" name="" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a href="#" class="enlace">
+            <img src="{{ url_for('static', filename='Img/inv.png') }}" alt="logo" class="logo">
+        </a>
+        <ul>
+            <li><a href="{{ url_for('registrar') }}" >Registrar</a></li>
+        </ul>
+    </nav>
+    <!--LINK NEXT Y BEFORE-->
+    <div class="links-btn">
+        <a href="{{ url_for('Equipo') }}" class="link-btn">Anterior</a>
+        <a href="{{ url_for('Pantalla') }}" class="link-btn">Siguiente</a>
+    </div>
+    <!--TITULO-->
+    <h2 class="titulo-form">Periféricos</h2>
+
+    <section class="form-section">
+        <div class="form-formu">
+            <form action="/perifericos" class="form" method="POST">
+                <label for="n_equi">Numero Equipo</label>
+                <input type="text" id="id" name="n_equi" placeholder="Ejm: Equipo 1" required>
+        
+                <label for="serial-mouse">Serial Mouse</label>
+                <input type="text" id="serial-mouse" name="serial-mouse" placeholder="Ejm: 4BC35TM9" required>
+        
+                <label for="marca-mouse">Marca Mouse</label>
+                <input type="text" id="marca-mouse" name="marca-mouse" placeholder="Ejm: HP" required>
+    
+                <label for="estado-mouse">Estado Mouse</label>
+                <input type="text" id="estado-mouse" name="estado-mouse" placeholder="Ejm: Bueno o Malo" required>
+    
+                <label for="descripcion-mouse">Descripción Mouse</label>
+                <textarea name="descripcion-mouse" id="descripcion-mouse" cols="30" rows="5" placeholder="Otras Características o Detalles"></textarea>
+    
+                <hr>
+    
+                <label for="serial-teclado">Serial Teclado</label>
+                <input type="text" id="serial-teclado" name="serial-teclado" placeholder="Ejm: 4BC35TM9" required>
+    
+                <label for="marca-teclado">Marca Teclado</label>
+                <input type="text" id="marca-teclado" name="marca-teclado" placeholder="Ejm: HP" required>
+    
+                <label for="estado_teclado">Estado Teclado</label>
+                <input type="text" id="estado_teclado" name="estado_teclado" placeholder="Ejm: Bueno o Malo" required>
+        
+                <label for="descripcion-teclado">Descripción Teclado</label>
+                <textarea name="descripcion-teclado" id="descripcion-teclado" cols="30" rows="5" placeholder="Otras Características o Detalles"></textarea>
+        
+                <label for="ubicacion">Ubicacion</label>
+                <input type="text" id="ubicacion" name="ubicacion" placeholder="Ejm: Sala 1" required>
+    
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+    <!--Tabla Perifericos-->
+    <div class="tabla-equipo">
+        <table class="table-eq">
+            <thead>
+                <th>#</th>
+                <th>N EQUIPO</th>
+                <th>SERIAL MAUSE</th>
+                <th>MARCA MAUSE</th>
+                <th>ESTADO MAUSE</th>
+                <th>DESCRIPCION MAUSE</th>
+                <th>SERIAL TECLADO</th>
+                <th>MARCA TECLADO</th>
+                <th>ESTADO TECLADO</th>
+                <th>DESCRIPCIÓN</th>
+                <th>UBICACION</th>
+                <th>EDITAR</th>
+                <th>ELIMINAR</th>
+            </thead>
+            <tbody>
+                {% for d in datos %}
+                    <tr>
+                        <td>{{d.ID_Periferico}}</td>
+                        <td>{{d.N_Equipo}}</td>
+                        <td>{{d.Mouse_Serial}}</td>
+                        <td>{{d.Mouse_Marca}}</td>
+                        <td>{{d.Mouse_Estado}}</td>
+                        <td>{{d.Mouse_Descripcion}}</td>
+                        <td>{{d.Teclado_Serial}}</td>
+                        <td>{{d.Teclado_Marca}}</td>
+                        <td>{{d.Teclado_Estado}}</td>
+                        <td>{{d.Teclado_Descripcion}}</td>
+                        <td>{{d.Peri_Ubicacion}}</td>
+                        <td><a href="/edit_perife/{{d.ID_Periferico}}" class="link-edit">EDITAR</a></td>
+                        <td><a href="/delete-perife/{{d.ID_Periferico}}" class="link-delete">ELIMINAR</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <!--PIE DE PAGINA-->
+    <footer class="pie-pagina">
+        <div class="boxing">
+            <figure>
+                <a href="#">
+                    <img src="{{ url_for('static', filename='Img/logouniversidad.png') }}" alt="Logo uni">
+                </a>
+            </figure>
+        </div>
+</body>
+</html>

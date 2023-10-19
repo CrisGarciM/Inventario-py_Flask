@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='form-css/form.css') }}">
+    <title>INVENTARIO</title>
+</head>
+<body>
+    <!--NAV-->
+    <nav>
+        <input type="checkbox" name="" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a href="#" class="enlace">
+            <img src="{{ url_for('static', filename='Img/inv.png') }}" alt="logo" class="logo">
+        </a>
+        <ul>
+            <li><a href="{{ url_for('registrar') }}" >Registrar</a></li>
+        </ul>
+    </nav>
+    <!--TITULO-->
+    <h2 class="titulo-form">Pantallas</h2>
+    <!--FORM-->
+    <section class="form-section">
+        <div class="form-formu">
+            <form action="/update-pantalla/{{pantalla.0}}" class="form" method="POST">
+                <label for="n_equi">Numero Equipo</label>
+                <input type="text" id="n_equi" name="n_equi" placeholder="Ejm: Equipo 1" required value="{{pantalla.1}}">
+        
+                <label for="serial">Serial</label>
+                <input type="text" id="serial" name="serial" placeholder="Ejm: 4BC35TM9" required value="{{pantalla.2}}">
+        
+                <label for="marca">Marca</label>
+                <input type="text" id="marca" name="marca" placeholder="Ejm: LG" required value="{{pantalla.3}}">
+    
+                <label for="pulgadas">Pulgadas</label>
+                <input type="text" id="pulgadas" name="pulgadas" placeholder="Ejm: 24" required value="{{pantalla.4}}">
+    
+                <label for="resolucion">Resolucion</label>
+                <input type="text" id="resolucion" name="resolucion" placeholder="Ejm: 1080p" required value="{{pantalla.5}}">
+    
+                <label for="estado">Estado</label>
+                <input type="text" id="estado" name="estado" placeholder="Ejm: Bueno o Malo" required value="{{pantalla.6}}">
+        
+                <label for="descripcion">Descripción</label>
+                <textarea name="descripcion" id="descripcion" cols="30" rows="5" placeholder="Otras Características o Detalles" value="{{pantalla.7}}"></textarea>
+        
+                <label for="ubicacion">Ubicacion</label>
+                <input type="text" id="ubicacion" name="ubicacion" placeholder="Ejm: Sala 1" required value="{{pantalla.8}}">
+    
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+    <!--FOOTER-->
+    <footer class="pie-pagina">
+        <div class="boxing">
+            <figure>
+                <a href="#">
+                    <img src="{{ url_for('static', filename='Img/logouniversidad.png') }}" alt="Logo uni">
+                </a>
+            </figure>
+        </div>
+</body>
+</html>

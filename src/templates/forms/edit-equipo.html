@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='form-css/form.css') }}">
+    <title>INVENTARIO</title>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" name="" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a href="#" class="enlace">
+            <img src="{{ url_for('static', filename='Img/inv.png') }}" alt="logo" class="logo">
+        </a>
+        <ul>
+            <li><a href="{{ url_for('registrar') }}" >Registrar</a></li>
+        </ul>
+    </nav>
+    <!--TITULO-->
+    <h2 class="titulo-form">Equipo</h2>
+    <!--FORM-->
+    <section class="form-section">
+        <div class="form-formu">
+            <form action="/update-equipo/{{equip.0}}" class="form" method="POST">
+                <label for="numero">Numero Equipo</label>
+                <input type="text" id="numero" name="numero" placeholder="Ejm: Equipo 1" required value="{{equip.1}}">
+        
+                <label for="serial">Serial</label>
+                <input type="text" id="serial" name="serial" placeholder="Ejm: 4BC35TM9" required value="{{equip.2}}">
+        
+                <label for="marca">Marca</label>
+                <input type="text" id="marca" name="marca" placeholder="Ejm: J&R" required value="{{equip.3}}">
+    
+                <label for="ram">Ram</label>
+                <input type="text" id="ram" name="ram" placeholder="Ejm: 8 GB DRR4" required value="{{equip.4}}">
+    
+                <label for="procesador">Procesador</label>
+                <input type="text" id="procesador" name="procesador" placeholder="Ejm: Intel Core I5 5600" required value="{{equip.5}}">
+    
+                <label for="disco">Disco</label>
+                <input type="text" id="disco" name="disco" placeholder="Ejm: 500 GB HDD o SSD " required value="{{equip.6}}">
+    
+                <hr>
+    
+                <label for="fecha">Fecha</label>
+                <input type="date" id="fecha" name="fecha" required value="{{equip.7}}">
+    
+                <label for="estado">Estado</label>
+                <input type="text" id="estado" name="estado" placeholder="Ejm: Bueno o Malo" required value="{{equip.8}}">
+    
+                <label for="grafica">Targeta Grafica</label>
+                <input type="text" id="grafica" name="grafica" placeholder="Ejm: intel graphics 630" value="{{equip.9}}">
+        
+                <label for="descripcion">Descripción</label>
+                <textarea name="descripcion" id="descripcion" cols="30" rows="5" placeholder="Otras Características o Detalles" value="{{equip.10}}"></textarea>
+        
+                <label for="ubicacion">Ubicacion</label>
+                <input type="text" id="ubicacion" name="ubicacion" placeholder="Ejm: Sala 1" required value="{{equip.11}}">
+    
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+    <footer class="pie-pagina">
+        <div class="boxing">
+            <figure>
+                <a href="#">
+                    <img src="{{ url_for('static', filename='Img/logouniversidad.png') }}" alt="Logo uni">
+                </a>
+            </figure>
+        </div>
+</body>
+</html>
